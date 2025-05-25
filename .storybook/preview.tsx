@@ -5,6 +5,7 @@ import "../src/styles/globals.scss";
 const ThemeDecorator: Decorator = (Story, context) => {
   const [mounted, setMounted] = useState(false);
   const theme = context.globals.theme || 'light';
+  const isWelcomePage = context.title === 'Welcome';
 
   useEffect(() => {
     setMounted(true);
@@ -18,7 +19,7 @@ const ThemeDecorator: Decorator = (Story, context) => {
 
   return (
     <div style={{ 
-      padding: "2rem",
+      padding: isWelcomePage ? "0" : "2rem",
       backgroundColor: mounted ? "var(--color-background)" : "#ffffff",
       color: mounted ? "var(--color-text-primary)" : "#000000",
       transition: "all 0.3s ease"
@@ -57,6 +58,11 @@ const preview: Preview = {
       },
       canvas: {
         sourceState: 'hidden',
+      },
+    },
+    options: {
+      storySort: {
+        order: ['Welcome', 'UI', 'Layout', 'Feedback', '*'],
       },
     },
   },

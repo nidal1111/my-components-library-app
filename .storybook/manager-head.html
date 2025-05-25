@@ -1,0 +1,20 @@
+<script>
+  // Force redirect to Welcome page on initial load
+  window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const path = urlParams.get('path');
+    
+    // If no path is specified or if it's the default redirect, go to Welcome
+    if (!path || path === '/docs/layout-card--docs') {
+      // Small delay to ensure Storybook is loaded
+      setTimeout(() => {
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('path', '/docs/welcome--docs');
+        window.history.replaceState({}, '', newUrl);
+        
+        // Trigger Storybook navigation
+        window.dispatchEvent(new PopStateEvent('popstate'));
+      }, 100);
+    }
+  });
+</script>

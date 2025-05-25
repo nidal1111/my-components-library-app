@@ -2,6 +2,12 @@
 
 A modern, performant, and accessible React component library showcased with Storybook.
 
+> **🚀 [LIVE DEMO](https://my-components-library-app.vercel.app/)** 
+
+[![Deploy Status](https://img.shields.io/github/deployments/nidal1111/my-components-library-app/production?label=vercel&logo=vercel)](https://my-components-library-app.vercel.app/)
+
+🚧 **Current Status:** Early development with 3 core components
+
 ## 🚀 Features
 
 - ✨ **Modern Components**: A collection of refined, production-ready UI components

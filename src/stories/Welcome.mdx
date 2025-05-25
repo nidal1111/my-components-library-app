@@ -1,0 +1,292 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Welcome" />
+
+<style>
+  {`
+    .welcome-page {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .hero-section {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 60px 0;
+      background: linear-gradient(135deg, #667eea57 0%, #5809a87a 100%);
+      border-radius: 20px;
+      color: white;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      font-weight: 300;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .feature-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e9ecef;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .feature-description {
+      color: #6c757d;
+      line-height: 1.6;
+    }
+
+    .components-section {
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .components-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .component-item {
+      background: white;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.2s;
+    }
+
+    .component-item:hover {
+      border-color: #667eea;
+      background: #f8f9ff;
+    }
+
+    .component-item.coming-soon {
+      opacity: 0.6;
+      background: #f8f9fa;
+    }
+
+    .component-icon {
+      font-size: 1.5rem;
+    }
+
+    .component-info h4 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+
+    .component-info p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .coming-soon-badge {
+      font-size: 0.75rem;
+      background: #ffeaa7;
+      color: #d63031;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 10px;
+    }
+
+    .quickstart-section {
+      background: #2c3e50;
+      color: white;
+      padding: 40px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    .code-block {
+      background: #1a252f;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      overflow-x: auto;
+    }
+
+    .code-block code {
+      color: #4ade80;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px 0;
+      color: #6c757d;
+    }
+  `}
+</style>
+
+<div className="welcome-page">
+  <div className="hero-section">
+    <h1 className="hero-title">🎨 Modern UI Components</h1>
+    <p className="hero-subtitle">
+      A collection of beautiful, accessible, and performant React components
+      built with TypeScript, SCSS, and Tailwind CSS
+    </p>
+    <span className="status-badge">
+      🚧 v0.1.0 - Work in Progress
+    </span>
+  </div>
+
+  <div className="features-grid">
+    <div className="feature-card">
+      <div className="feature-icon">⚡</div>
+      <h3 className="feature-title">Lightning Fast</h3>
+      <p className="feature-description">
+        Optimized for performance with tree-shaking support and minimal bundle size
+      </p>
+    </div>
+    <div className="feature-card">
+      <div className="feature-icon">♿</div>
+      <h3 className="feature-title">Fully Accessible</h3>
+      <p className="feature-description">
+        WCAG 2.1 compliant components with keyboard navigation and screen reader support
+      </p>
+    </div>
+    <div className="feature-card">
+      <div className="feature-icon">🎯</div>
+      <h3 className="feature-title">TypeScript First</h3>
+      <p className="feature-description">
+        Built with TypeScript for excellent developer experience and type safety
+      </p>
+    </div>
+    <div className="feature-card">
+      <div className="feature-icon">🌙</div>
+      <h3 className="feature-title">Dark Mode Ready</h3>
+      <p className="feature-description">
+        Every component supports light and dark themes out of the box
+      </p>
+    </div>
+    <div className="feature-card">
+      <div className="feature-icon">🎨</div>
+      <h3 className="feature-title">Customizable</h3>
+      <p className="feature-description">
+        Easy to customize with CSS variables, SCSS mixins, and Tailwind utilities
+      </p>
+    </div>
+    <div className="feature-card">
+      <div className="feature-icon">📱</div>
+      <h3 className="feature-title">Responsive</h3>
+      <p className="feature-description">
+        Mobile-first design approach with responsive components that work everywhere
+      </p>
+    </div>
+  </div>
+
+  <div className="components-section">
+    <h2 className="section-title">📦 Available Components</h2>
+    <div className="components-list">
+      <div className="component-item">
+        <span className="component-icon">🔘</span>
+        <div className="component-info">
+          <h4>Button</h4>
+          <p>Multiple variants, sizes, and states</p>
+        </div>
+      </div>
+      <div className="component-item">
+        <span className="component-icon">📝</span>
+        <div className="component-info">
+          <h4>Input</h4>
+          <p>With validation and custom styling</p>
+        </div>
+      </div>
+      <div className="component-item">
+        <span className="component-icon">📋</span>
+        <div className="component-info">
+          <h4>Card</h4>
+          <p>Flexible container component</p>
+        </div>
+      </div>
+      <div className="component-item coming-soon">
+        <span className="component-icon">🔔</span>
+        <div className="component-info">
+          <h4>Toast <span className="coming-soon-badge">Coming Soon</span></h4>
+          <p>Notification system</p>
+        </div>
+      </div>
+      <div className="component-item coming-soon">
+        <span className="component-icon">💬</span>
+        <div className="component-info">
+          <h4>Modal <span className="coming-soon-badge">Coming Soon</span></h4>
+          <p>Dialog and popup windows</p>
+        </div>
+      </div>
+      <div className="component-item coming-soon">
+        <span className="component-icon">📊</span>
+        <div className="component-info">
+          <h4>Table <span className="coming-soon-badge">Coming Soon</span></h4>
+          <p>Data display with sorting</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="footer">
+    <p>Built using React, TypeScript, and Storybook</p>
+    <p>© 2025 Modern UI Components</p>
+  </div>
+</div>
