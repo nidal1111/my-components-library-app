@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Components Library 🎨
 
-## Getting Started
+A modern, performant, and accessible React component library showcased with Storybook.
 
-First, run the development server:
+## 🚀 Features
+
+- ✨ **Modern Components**: A collection of refined, production-ready UI components
+- 🏃‍♂️ **Performance First**: Optimized for minimal bundle size and fast loading
+- 🎨 **Fully Customizable**: Advanced theming system with Sass variables
+- ♿ **Accessible**: WCAG 2.1 compliant with full keyboard and screen reader support
+- 📱 **Responsive**: Components that work perfectly on all devices
+- 🔧 **Developer Friendly**: TypeScript, Storybook, and comprehensive documentation
+- 📋 **Copy & Paste**: Integrated system for copying component code
+
+## 🛠️ Tech Stack
+
+- **Documentation**: Storybook 8
+- **UI**: React 19
+- **Styling**: SCSS Modules + Tailwind CSS
+- **Type Safety**: TypeScript 5.6+
+- **Components**: Radix UI Primitives
+- **Animations**: Framer Motion
+- **Testing**: Vitest + Testing Library
+- **Code Quality**: ESLint + Prettier
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/nidal1111/my-components-library-app.git
+cd ui-components-library
+npm install
+```
+
+## 🚀 Quick Start
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to explore components in Storybook.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+This creates a static Storybook build in the `storybook-static` directory.
 
-To learn more about Next.js, take a look at the following resources:
+### Preview Production Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Serves the production build locally on port 3000.
 
-## Deploy on Vercel
+## 📚 Available Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Primitives
+- ✅ **Button** - Buttons with multiple variants and states
+- ✅ **Input** - Input fields with validation and addons
+- ✅ **Select** - Accessible select dropdown
+- ✅ **Checkbox** - Single checkboxes and groups
+- ✅ **Radio** - Radio button groups
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Layout (In Development)
+- 🚧 Container
+- 🚧 Grid
+- 🚧 Stack
+- ✅ **Card** - Content container with variants
+
+### Navigation (In Development)
+- 🚧 Tabs
+- 🚧 Breadcrumb
+- 🚧 Pagination
+
+### Feedback (In Development)
+- 🚧 Toast
+- 🚧 Alert
+- 🚧 Modal
+- 🚧 Loading
+
+### Data Display (In Development)
+- 🚧 Table
+- 🚧 Badge
+- 🚧 Avatar
+- 🚧 Tooltip
+
+## 🎨 Design System
+
+The project uses a design token system based on Sass variables to ensure consistency and ease of customization:
+
+```scss
+$color-primary-600: #2563eb;
+$color-neutral-100: #f5f5f5;
+$spacing-2: 0.5rem;
+$radius-md: 0.5rem;
+```
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests in UI mode
+npm run test:ui
+```
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start Storybook development server on port 3000
+- `npm run build` - Build static Storybook for production
+- `npm run start` - Serve production build on port 3000
+- `npm run preview` - Build and serve in one command
+- `npm run storybook` - Start Storybook on port 6006 (alternative)
+- `npm run type-check` - Check TypeScript types
+- `npm run format` - Format code with Prettier
+- `npm run lint` - Lint with ESLint
+- `npm test` - Run tests
+- `npm run test:coverage` - Run tests with coverage
+- `npm run test:ui` - Run tests in UI mode
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 🙏 Acknowledgments
+
+- [Radix UI](https://www.radix-ui.com/) for accessible primitive components
+- [Next.js](https://nextjs.org/) for the React framework
+- [Storybook](https://storybook.js.org/) for component documentation
+
+## 🚀 Deployment
+
+This project is optimized for deployment as a static Storybook site:
+
+### Vercel
+The project includes a `vercel.json` configuration. Simply connect your repository to Vercel.
+
+### Netlify  
+The project includes a `netlify.toml` configuration. Connect your repository to Netlify.
+
+### Other Platforms
+Run `npm run build` to generate the `storybook-static` directory, deployable to any static hosting.
+

@@ -1,0 +1,105 @@
+// Button mixins
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+  height: 2.5rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary-500);
+  }
+}
+
+// Input mixins
+@mixin input-base {
+  display: block;
+  width: 100%;
+  padding: 0 var(--spacing-md);
+  height: 2.5rem;
+  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+  
+  &:hover:not(:disabled) {
+    border-color: var(--color-border-hover);
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 1px var(--color-primary-500);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Card mixins
+@mixin card-base {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+}
+
+// Elevation mixins
+@mixin elevation($level: 1) {
+  @if $level == 1 {
+    box-shadow: var(--shadow-sm);
+  } @else if $level == 2 {
+    box-shadow: var(--shadow-md);
+  } @else if $level == 3 {
+    box-shadow: var(--shadow-lg);
+  } @else if $level == 4 {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+// Responsive mixins
+@mixin mobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 641px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
