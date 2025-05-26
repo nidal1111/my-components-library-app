@@ -68,9 +68,9 @@ Serves the production build locally on port 3000.
 ### Primitives
 - ✅ **Button** - Buttons with multiple variants and states
 - ✅ **Input** - Input fields with validation and addons
-- ✅ **Select** - Accessible select dropdown
-- ✅ **Checkbox** - Single checkboxes and groups
-- ✅ **Radio** - Radio button groups
+- 🚧  **Select** - Accessible select dropdown
+- 🚧  **Checkbox** - Single checkboxes and groups
+- 🚧  **Radio** - Radio button groups
 
 ### Layout (In Development)
 - 🚧 Container
@@ -156,7 +156,7 @@ This project is optimized for deployment as a static Storybook site:
 ### Vercel
 The project includes a `vercel.json` configuration. Simply connect your repository to Vercel.
 
-### Netlify  
+### Netlify 🚧 
 The project includes a `netlify.toml` configuration. Connect your repository to Netlify.
 
 ### Other Platforms
